@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+    </head>
+      
+    <body>
+        <a href="dummy (1).pdf" download="resume.pdf">Download PDF</a>
+        <a href="file.pdf" download>Download PDF</a>
+        <script>
+           const download = (path, filename) => {
+    // Create a new link
+    const anchor = document.createElement('a');
+    anchor.href = path;
+    anchor.download = filename;
+
+    // Append to the DOM
+    document.body.appendChild(anchor);
+
+    // Trigger `click` event
+    anchor.click();
+
+    // Remove element from DOM
+    document.body.removeChild(anchor);
+}; 
+
+// Example download
+download('atta-resume.pdf', 'resume.pdf');
+        </script>
+    </body>
+
+</html>
+
+
